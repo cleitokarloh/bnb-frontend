@@ -26,4 +26,4 @@
   - I don't implement it in this project, but normally I use Setry.io to monitor the application.
  
 ## Deploy
-I deploy on Vercel, see: https://bnb.clei.to
+I deploy on Vercel, see: https://bnb.app.clei.to
