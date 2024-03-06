@@ -1,30 +1,29 @@
-# React + TypeScript + Vite
+# Turno Challenge - React + TypeScript + Vite + Styled Components
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+![001](https://github.com/cleitokarloh/bnb-frontend/assets/5879585/c003e3c9-99ec-40e4-abc2-9abd3b049492)
 
-## Expanding the ESLint configuration
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
 
-- Configure the top-level `parserOptions` property like this:
+# First step to run
+- Clone this repository
+- run `cd bnb-frontend`
+- run `npm i`
+- run `npm run dev`
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+## For the front-end specific requirements:
+- TypeScript
+  - In addition to the TypeScript application, to have more contact with TypeScript I used styled-components.
+- Code structure and organization
+  - I separated into 3 areas of application: auth, admin, and customer. To components shared inside the application, I separated them in the `src/components` folder. Other components of specific pages I maintain inside the page folder.
+ 
+## And big extra points if you have a solid knowledge of:
+- Front-end cache
+  - Between many options to do that, I chose to use TanStack Query. With this lib, it's possible to implement the cache configuration and the same behavior of using one global state like Redux, Zustand, or another without creating a big structure to do that.
+- Performance and monitoring tools
+  - In this particular project, I implemented a `memo` of React to lists and all functions using the `useCallback` hook of React to avoid unnecessary recalculation.
+  - I don't implement it in this project, but normally I use Setry.io to monitor the application.
+ 
+## Deploy
+I deploy on Vercel, see: https://bnb.clei.to
